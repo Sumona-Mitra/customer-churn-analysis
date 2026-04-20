@@ -46,22 +46,24 @@ HAVING COUNT(*) > 1;
 
 ## 📊 SQL Analysis
 
-🔹 Churn Rate
-
+### 🔹 Churn Rate
+```sql
 SELECT 
 ROUND(SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS churn_rate
 FROM customers;
+```
 
-🔹 Churn by Contract Type
-
+### 🔹 Churn by Contract Type
+```sql
 SELECT Contract,
 COUNT(*) AS total_customers,
 SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers
 FROM customers
 GROUP BY Contract;
+```
 
-🔹 Churn by Tenure Group
-
+### 🔹 Churn by Tenure Group
+```sql
 SELECT 
 CASE 
   WHEN tenure < 12 THEN '0-1 Year'
@@ -77,9 +79,10 @@ CASE
   WHEN tenure BETWEEN 12 AND 24 THEN '1-2 Years'
   ELSE '2+ Years'
 END;
+```
 
-🔹 Monthly Charges Analysis
-
+### 🔹 Monthly Charges Analysis
+```sql
 SELECT 
 CASE 
   WHEN MonthlyCharges < 30 THEN 'Low'
@@ -95,9 +98,10 @@ CASE
   WHEN MonthlyCharges BETWEEN 30 AND 70 THEN 'Medium'
   ELSE 'High'
 END;
+```
 
-🔹 Advanced Analysis
-
+### 🔹 Advanced Analysis
+```sql
 SELECT Contract, InternetService,
 COUNT(*) AS total_customers,
 SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
@@ -105,6 +109,7 @@ ROUND(SUM(CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS c
 FROM customers
 GROUP BY Contract, InternetService
 ORDER BY churn_rate DESC;
+```
 
 ## 📈 Power BI Dashboard
 
