@@ -23,10 +23,11 @@ This project focuses on:
 - SQL (Data Cleaning & Analysis)  
 - Power BI (Dashboard & Visualization)  
 
-## 📂 Dataset
+## 🗃️ Dataset
+The dataset used in this project is the Telco Customer Churn dataset.
 
-- Telco Customer Churn Dataset  
-- Includes customer demographics, services, billing, and churn status  
+- File name: `telco_customer_churn.csv`
+- Source: Kaggle 
 
 ## 🧹 Data Cleaning (SQL)
 
