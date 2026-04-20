@@ -133,6 +133,9 @@ Early tenure customers are more likely to leave
 Fiber optic users show higher churn
 Payment method impacts retention
 
+## 📌 Tools used
+SQL, Power BI.
+
 ## 💡 Business Recommendations
 Encourage long-term contracts through incentives
 Improve onboarding experience for new customers
