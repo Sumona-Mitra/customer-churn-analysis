@@ -4,11 +4,6 @@
 
 This project analyzes telecom customer churn using SQL and Power BI to identify key drivers such as contract type, tenure, and monthly charges. The goal is to help improve customer retention through data-driven insights.
 
-## 📌 Project Overview
-
-This project analyzes customer churn behavior to identify key factors driving customer attrition and provides actionable insights to improve customer retention.  
-The analysis uses **SQL for data processing** and **Power BI for visualization**.
-
 ## 🎯 Business Problem
 
 Customer churn leads to revenue loss and impacts long-term business growth.  
@@ -27,15 +22,17 @@ This project focuses on:
 The dataset used in this project is the Telco Customer Churn dataset.
 
 - File name: `telco_customer_churn.csv`
-- Source: Kaggle 
+- Source: Kaggle
+- Table name used in SQL: `customers` (derived from Telco dataset)
 
 ## 🧹 Data Cleaning (SQL)
 
-sql
+```sql
 -- Handle missing TotalCharges
 UPDATE customers
 SET TotalCharges = NULL
 WHERE TotalCharges = '';
+```
 
 -- Convert datatype
 ALTER TABLE customers
@@ -132,9 +129,6 @@ High monthly charges increase churn probability
 Early tenure customers are more likely to leave
 Fiber optic users show higher churn
 Payment method impacts retention
-
-## 📌 Tools used
-SQL, Power BI.
 
 ## 💡 Business Recommendations
 Encourage long-term contracts through incentives
