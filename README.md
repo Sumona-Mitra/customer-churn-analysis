@@ -19,6 +19,7 @@ This project focuses on:
 - Power BI (Dashboard & Visualization)  
 
 ## 🗃️ Dataset
+Analyzed a dataset of 7000+ customer records to identify retention pattern.
 The dataset used in this project is the Telco Customer Churn dataset.
 
 - File name: `telco_customer_churn.csv`
